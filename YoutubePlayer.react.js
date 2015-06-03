@@ -24,8 +24,8 @@ var loadAPI = (function() {
 
     status = 'loading';
     var script = document.createElement('script');
-    script.src = 'https://www.youtube.com/player_api?playerapiid=ytplayer';
-    script.onload = onload;
+    script.src = 'https://www.youtube.com/iframe_api';
+    onYouTubeIframeAPIReady = onload;
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
   };
